@@ -1,0 +1,42 @@
+{
+  "actorSpecification": 1,
+  "fields": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "recordType": { "type": "string", "description": "Record type: clinical_trial, fda_recall, or fda_510k." },
+      "recordId": { "type": "string", "description": "Canonical record ID." },
+      "nctId": { "type": ["string", "null"], "description": "ClinicalTrials.gov NCT ID." },
+      "briefTitle": { "type": ["string", "null"], "description": "Clinical trial brief title." },
+      "sponsor": { "type": ["string", "null"], "description": "Lead sponsor name." },
+      "overallStatus": { "type": ["string", "null"], "description": "Trial overall status." },
+      "recallNumber": { "type": ["string", "null"], "description": "FDA enforcement recall number." },
+      "recallingFirm": { "type": ["string", "null"], "description": "Recalling firm name." },
+      "kNumber": { "type": ["string", "null"], "description": "FDA 510(k) number." },
+      "deviceName": { "type": ["string", "null"], "description": "Cleared 510(k) device name." },
+      "url": { "type": ["string", "null"], "description": "Direct source URL." }
+    },
+    "required": ["recordType", "recordId"]
+  },
+  "views": {
+    "overview": {
+      "title": "Pharma & FDA Regulatory Overview",
+      "transformation": {
+        "fields": ["recordType", "recordId", "briefTitle", "sponsor", "overallStatus", "recallingFirm", "deviceName", "url"]
+      },
+      "display": {
+        "component": "table",
+        "properties": {
+          "recordType": { "label": "Type", "format": "text" },
+          "recordId": { "label": "ID", "format": "text" },
+          "briefTitle": { "label": "Trial Title", "format": "text" },
+          "sponsor": { "label": "Sponsor", "format": "text" },
+          "overallStatus": { "label": "Status", "format": "text" },
+          "recallingFirm": { "label": "Recalling Firm", "format": "text" },
+          "deviceName": { "label": "Device", "format": "text" },
+          "url": { "label": "URL", "format": "link" }
+        }
+      }
+    }
+  }
+}

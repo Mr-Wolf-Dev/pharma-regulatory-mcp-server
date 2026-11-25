@@ -1,0 +1,20 @@
+{
+  "actorOutputSchemaVersion": 1,
+  "title": "FDA & Clinical Trials Regulatory Output",
+  "description": "Normalized openFDA recalls, 510(k) device clearances, and ClinicalTrials.gov v2 studies.",
+  "type": "object",
+  "properties": {
+    "overview": {
+      "type": "string",
+      "title": "Regulatory Overview",
+      "description": "Table view of extracted regulatory records.",
+      "template": "{{links.apiDefaultDatasetUrl}}/items?view=overview"
+    },
+    "dataset": {
+      "type": "string",
+      "title": "Full Regulatory Dataset (JSON)",
+      "description": "Complete JSON dataset of normalized FDA and ClinicalTrials.gov records.",
+      "template": "{{links.apiDefaultDatasetUrl}}/items"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "actorSpecification": 1,
+  "name": "pharma-regulatory-mcp-server",
+  "title": "FDA Recalls, 510(k) & Clinical Trials Intel + MCP",
+  "description": "Keyless HTTP-only Apify Actor & Standby MCP Server extracting openFDA drug/device/food recalls, FDA 510(k) medical device clearances, and ClinicalTrials.gov v2 studies.",
+  "version": "0.1",
+  "usesStandbyMode": true,
+  "input": "./input_schema.json",
+  "output": "./output_schema.json",
+  "dockerfile": "../Dockerfile",
+  "storages": {
+    "dataset": "./dataset_schema.json"
+  }
+}

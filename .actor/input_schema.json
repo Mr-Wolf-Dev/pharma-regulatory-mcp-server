@@ -1,0 +1,72 @@
+{
+  "title": "Pharma & FDA Regulatory Intel Input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "mode": {
+      "title": "Extraction Mode",
+      "type": "string",
+      "description": "Data source mode: clinical_trials, fda_recalls, or fda_510k.",
+      "enum": ["clinical_trials", "fda_recalls", "fda_510k"],
+      "default": "clinical_trials"
+    },
+    "query": {
+      "title": "Search Query",
+      "type": "string",
+      "description": "General search keyword (trial term, recalled product, or 510(k) device name).",
+      "editor": "textfield"
+    },
+    "condition": {
+      "title": "Condition (Clinical Trials)",
+      "type": "string",
+      "description": "Disease or condition for ClinicalTrials.gov v2 (e.g. \"melanoma\").",
+      "editor": "textfield",
+      "prefill": "melanoma"
+    },
+    "intervention": {
+      "title": "Intervention / Drug (Clinical Trials)",
+      "type": "string",
+      "description": "Drug or intervention name for ClinicalTrials.gov v2.",
+      "editor": "textfield"
+    },
+    "sponsor": {
+      "title": "Sponsor / Firm / Applicant",
+      "type": "string",
+      "description": "Trial sponsor, recalling firm, or 510(k) applicant.",
+      "editor": "textfield"
+    },
+    "recallCategory": {
+      "title": "FDA Recall Category",
+      "type": "string",
+      "description": "Enforcement endpoint category when mode=fda_recalls.",
+      "enum": ["drug", "device", "food"],
+      "default": "drug"
+    },
+    "classification": {
+      "title": "FDA Recall Classification",
+      "type": "string",
+      "description": "Optional recall class filter (e.g. \"Class I\", \"Class II\").",
+      "editor": "textfield"
+    },
+    "status": {
+      "title": "Status",
+      "type": "string",
+      "description": "Trial overall status (e.g. RECRUITING) or recall status (e.g. Ongoing).",
+      "editor": "textfield"
+    },
+    "phase": {
+      "title": "Trial Phase",
+      "type": "string",
+      "description": "Optional trial phase filter (e.g. PHASE3).",
+      "editor": "textfield"
+    },
+    "maxItems": {
+      "title": "Max Items",
+      "type": "integer",
+      "description": "Maximum records to return (1-100).",
+      "default": 20,
+      "minimum": 1,
+      "maximum": 100
+    }
+  }
+}
