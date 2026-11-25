@@ -1,5 +1,7 @@
 # FDA Recalls, 510(k) & Clinical Trials Intel + MCP
 
+[![Glama MCP Server](https://glama.ai/mcp/servers/Mr-Wolf-Dev/pharma-regulatory-mcp-server/badges/score.svg)](https://glama.ai/mcp/servers/Mr-Wolf-Dev/pharma-regulatory-mcp-server)
+
 **Keyless, HTTP-only (< 512 MB RAM) Apify Actor & Standby Streamable HTTP MCP Server** for life sciences, biotech, MedTech, and regulatory intelligence.
 
 - **Apify Store:** `https://apify.com/mr.wolf/pharma-regulatory-mcp-server`
