@@ -1,0 +1,17 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.Mr-Wolf-Dev/pharma-regulatory-mcp-server",
+  "title": "FDA Recalls, 510(k) & Clinical Trials Intel + MCP",
+  "description": "Keyless HTTP-only Apify Actor & Standby MCP Server extracting openFDA drug/device/food recalls, FDA ",
+  "repository": {
+    "url": "https://github.com/Mr-Wolf-Dev/pharma-regulatory-mcp-server",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mr-wolf-1--pharma-regulatory-mcp-server.apify.actor/mcp"
+    }
+  ]
+}
