@@ -18,7 +18,7 @@ export interface McpServerDependencies {
   billing: BillingMeter<PharmaBillingEvent>;
 }
 
-function createConfiguredMcpServer(deps: McpServerDependencies): McpServer {
+export function createConfiguredMcpServer(deps: McpServerDependencies): McpServer {
   const server = new McpServer({
     name: 'pharma-regulatory-mcp-server',
     version: '0.1.0',
